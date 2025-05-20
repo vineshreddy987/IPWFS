@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:prod": "NODE_ENV=production vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -16,7 +17,8 @@
     "axios": "^1.9.0",
     "bootstrap": "^5.3.6",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",

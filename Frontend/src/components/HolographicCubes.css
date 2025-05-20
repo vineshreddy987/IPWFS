@@ -1,0 +1,196 @@
+/* Holographic Cubes Component Styles */
+.holographic-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+/* Grid background styling */
+.grid-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0a0329 0%, #1b0d3b 100%);
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(52, 27, 132, 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(52, 27, 132, 0.2) 1px, transparent 1px);
+  z-index: 1;
+}
+
+/* Container for the cubes */
+.cubes-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  perspective: 1000px;
+}
+
+/* Base cube styling */
+.holographic-cube {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 30px rgba(255, 123, 255, 0.5);
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+/* Left side cubes styling */
+.cube-left-1 {
+  top: 10%;
+  left: 5%;
+  width: 100px;
+  height: 100px;
+  transform: translateY(-50%) rotateY(15deg) rotateX(10deg);
+  background: linear-gradient(45deg, 
+    rgba(255, 145, 255, 0.7), 
+    rgba(183, 255, 255, 0.7), 
+    rgba(255, 255, 145, 0.7));
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.cube-left-2 {
+  top: 50%;
+  left: 10%;
+  width: 100px;
+  height: 100px;
+  transform: translateY(-50%) rotateY(-15deg) rotateX(-5deg);
+  background: linear-gradient(135deg, 
+    rgba(183, 255, 255, 0.7), 
+    rgba(255, 145, 255, 0.7), 
+    rgba(145, 255, 255, 0.7));
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Right side cubes styling */
+.cube-right-1 {
+  top: 10%;
+  right: 5%;
+  width: 100px;
+  height: 100px;
+  transform: translateY(-50%) rotateY(-15deg) rotateX(10deg);
+  background: linear-gradient(45deg, 
+    rgba(183, 255, 255, 0.7), 
+    rgba(255, 145, 255, 0.7), 
+    rgba(255, 255, 145, 0.7));
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.cube-right-2 {
+  top: 50%;
+  right: 10%;
+  width: 100px;
+  height: 100px;
+  transform: translateY(-50%) rotateY(15deg) rotateX(-5deg);
+  background: linear-gradient(135deg, 
+    rgba(255, 145, 255, 0.7), 
+    rgba(183, 255, 255, 0.7), 
+    rgba(145, 255, 255, 0.7));
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Website name styling */
+.website-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  font-weight: 800;
+  color: transparent;
+  background: linear-gradient(to right, #ff61d8, #5ce1ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(92, 225, 255, 0.5);
+  z-index: 5;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* Cube hover effects */
+.holographic-cube:hover {
+  box-shadow: 0 0 40px rgba(255, 123, 255, 0.8);
+  transform: scale(1.05) translateY(-5px) rotateY(20deg);
+  transition: all 0.3s ease;
+}
+
+/* Specific adjustment for 1128*788.981 resolution */
+@media (width: 1128px) and (height: 788.981px) {
+  .holographic-container {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .cube-left-1 {
+    left: 5%;
+    top: 30%;
+  }
+  
+  .cube-left-2 {
+    left: 8%;
+    top: 70%;
+  }
+  
+  .cube-right-1 {
+    right: 5%;
+    top: 30%;
+  }
+  
+  .cube-right-2 {
+    right: 8%;
+    top: 70%;
+  }
+  
+  .website-name {
+    font-size: 5.5rem;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .holographic-cube {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .website-name {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .holographic-container {
+    height: 100vh;
+  }
+  
+  .holographic-cube {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .website-name {
+    font-size: 2.5rem;
+  }
+  
+  .cube-left-1, .cube-left-2 {
+    left: 5%;
+  }
+  
+  .cube-right-1, .cube-right-2 {
+    right: 5%;
+  }
+} 

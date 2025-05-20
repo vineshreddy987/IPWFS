@@ -1,8 +1,28 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Reset defaults to ensure full width */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100vw;
+  max-width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #070b2b;
+  color: white;
+}
+
+.App {
+  width: 100vw;
+  max-width: 100%;
+  min-height: 100vh;
+  background-color: #070b2b;
+  color: white;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .logo {
